@@ -3,11 +3,11 @@ require_relative 'engine'
 class Vehicle 
   attr_reader :color, :make, :model
 
-  def initialize(color:, make:, model:)
+  def initialize(color:, make:, model:, engine_size:, engine_horsepower:)
     @color = color
     @make = make
     @model = model
-    @engine = engine
+    @engine = engine(engine_size, engine_horsepower)
   end
 
   def start
@@ -20,8 +20,8 @@ class Vehicle
 
   private
 
-  def engine
-    Engine.new(size: 150, horsepower: 500)
+  def engine(size, horsepower)
+    Engine.new(size: size, horsepower: horsepower)
   end
 end
 
