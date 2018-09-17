@@ -7,6 +7,16 @@ class Engine
   end
 
   def start
-    puts "Starting engine that is #{@size} cubic centimeters with #{@horsepower} horsepower"
+    puts "Starting #{name} engine that is #{@size} cubic centimeters with #{@horespower} horsepower and #{cylinders} cylinders"
+  end
+
+  private
+
+  def name
+    self.class.to_s
+  end
+
+  def cylinders
+    raise "Subclass must implement this method"
   end
 end

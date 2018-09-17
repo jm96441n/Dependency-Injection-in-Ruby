@@ -1,4 +1,7 @@
 require_relative 'engine'
+require_relative 'v6'
+require_relative 'v8'
+require_relative 'v12'
 
 class Car
   attr_reader :color, :make, :model
@@ -19,11 +22,11 @@ class Car
   end
 end
 
-big_engine = Engine.new(size: 600, horsepower: 850)
+big_engine = V8.new(size: 600, horsepower: 850)
 
-fast_engine = Engine.new(size: 200, horsepower: 1000)
+fast_engine = V12.new(size: 200, horsepower: 1000)
 
-small_engine = Engine.new(size: 150, horsepower: 300)
+small_engine = V6.new(size: 150, horsepower: 300)
 
 camaro = Car.new(color: 'red', make: 'Chevy', model: 'Camaro', engine: fast_engine)
 blue_prius = Car.new(color: 'blue', make: 'Toyota', model: 'Prius', engine: small_engine)
