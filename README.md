@@ -38,7 +38,6 @@ different in this branch, and how it affects our codebase.
 
 ## Changes in this Branch
 
-<<<<<<< HEAD
 So let's take a look at how using dependency injection allows us to more easily extend our code. By passing in the 
 dependency on `Engine` we remove the explicit dependency on the `Engine` class and change that dependency to be 
 "any object that responds to `start` method". This allows cars to have different types of engines, without any changes 
@@ -47,9 +46,6 @@ can use them interchangeably when creating new instances of cars. In the next (a
 will see how the greater flexbility allows us to create `Vehicle` subclasses with ease.
 
 As always, see this in action in our `runner.rb` file and can be run by running `ruby runner.rb` in the command line
-=======
-So now we can have each car have it's own engine. The problem? `Car` knows too much about `Engine`. We're explicitly passing attributes of the engine to the `Car` class. The other issue we can run into is reusability. Let's say two different cars use the same engine (or even in this case, two of the same types of cars just different colors), we have to instantiate the same engine every time. Let's move on to our next branch, `use_dependency_injection` to clean this up a bit.
->>>>>>> update README
 
 ## Read More
 
