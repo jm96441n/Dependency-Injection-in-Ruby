@@ -38,10 +38,7 @@ different in this branch, and how it affects our codebase.
 
 ## Changes in this Branch
 
-Not too many changes here. As you can see we have our `Vehicle` and `Engine` classes. Take note of the fact that 
-`Vehicle` has a tightly coupled dependency on `Engine`, and that it can only take one type of engine. If we want to 
-expand this so that vehicle's can have different engines, we're going to have to make some changes. After looking over 
-this code, move on to the `configurable_engine` branch to see how we accomodate this.
+So now we can have each car have it's own engine. The problem? `Car` knows too much about `Engine`. We're explicitly passing attributes of the engine to the `Car` class. The other issue we can run into is reusability. Let's say two different cars use the same engine (or even in this case, two of the same types of cars just different colors), we have to instantiate the same engine every time. Let's move on to our next branch, `use_dependency_injection` to clean this up a bit.
 
 As always, see this in action in our `runner.rb` file and can be run by running `ruby runner.rb` in the command line
 
