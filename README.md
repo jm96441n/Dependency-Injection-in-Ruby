@@ -38,15 +38,7 @@ different in this branch, and how it affects our codebase.
 
 ## Changes in this Branch
 
-Good news! Now we're finally using dependency injection. Rather than have the `Vehicle` class initialize an `Engine`, 
-we're now passing in (or injecting) the engine dependency, through the initializer for a vehicle. This allows for the 
-`Vehicle` class to rely on it's engine, without having to know too much about the implementation details of an engine. 
-
-In addition, this will allow greater flexibility, extensibility, and reusability moving forward. If we want different 
-types of engines we can pass them to the instance of `Vehicle` that we're initializing, while if we want to reuse a particular 
-type of engine, we only need to create one instance of it. We can see the added reusability in this branch, in that 
-both the `blue_prius` and `orange_prius` use the same type of engine, but we only need to create one instance of it. 
-The next branch, `subclass_engine`, will explore the added extensiblity and flexbility that dependency injection afford us.
+So let's take a look at how using dependency injection allows us to more easily extend our code. By passing in the dependency on `Engine` we remove the explicit dependency on the `Engine` class and change that dependency to be "any object that responds to `start` method". This allows cars to have different types of engines, without any changes necessary to the car class. Here we'll see the introduction of the `V6`, `V8`, and `V12` engine subclasses, and how we can use them interchangeably when creating new instances of cars.
 
 As always, see this in action in our `runner.rb` file and can be run by running `ruby runner.rb` in the command line
 
