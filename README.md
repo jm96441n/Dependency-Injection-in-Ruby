@@ -31,7 +31,7 @@ After switching branches, be sure to check the section below (Changes in this Br
 
 ## Changes in this Branch
 
-Right now there's nothing here! That's on purpose, as you move between the branches check this section first to get an idea of what you'll be looking for in terms of changes to the existing classes, and what new ones might be introduced.
+Not too many changes here. As you can see we have our `Car` and `Engine` classes. Take note of the fact that `Car` has an tightly coupled dependcy on `Engine`, and that it can only take one type of engine. If we want to expand this so that car's can have different engines, we're going to have to make some changes. After looking over this code, move on to the `configurable_engine` branch to see how we accomodate this.
 
 ## Read More
 
