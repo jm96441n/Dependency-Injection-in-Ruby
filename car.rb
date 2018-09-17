@@ -8,3 +8,4 @@ class Car < Vehicle
     self.class.to_s  
   end
 end
+
