@@ -38,7 +38,10 @@ different in this branch, and how it affects our codebase.
 
 ## Changes in this Branch
 
-So now we can have each car have it's own engine. The problem? `Car` knows too much about `Engine`. We're explicitly passing attributes of the engine to the `Car` class. The other issue we can run into is reusability. Let's say two different cars use the same engine (or even in this case, two of the same types of cars just different colors), we have to instantiate the same engine every time. Let's move on to our next branch, `use_dependency_injection` to clean this up a bit.
+So now we can have each vehicle have it's own engine. The problem? `Vehicle` knows too much about `Engine`. We're explicitly 
+passing attributes of the engine to the `Vehicle` class. The other issue we can run into is reusability. Let's say two 
+different vehicles use the same engine (or even in this case, two of the same types of vehicles just different colors), we have 
+to instantiate the same engine every time. Let's move on to our next branch, `use_dependency_injection` to clean this up a bit.
 
 As always, see this in action in our `runner.rb` file and can be run by running `ruby runner.rb` in the command line
 
