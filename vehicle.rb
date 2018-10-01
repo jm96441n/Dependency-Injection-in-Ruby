@@ -1,6 +1,6 @@
 require_relative 'engine'
 
-class Car
+class Vehicle 
   attr_reader :color, :make, :model
 
   def initialize(color:, make:, model:)
@@ -25,7 +25,3 @@ class Car
   end
 end
 
-car = Car.new(color: 'red', make: 'Chevy', model: 'Camaro')
-
-car.start
-car.drive

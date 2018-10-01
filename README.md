@@ -43,6 +43,8 @@ Not too many changes here. As you can see we have our `Vehicle` and `Engine` cla
 expand this so that vehicle's can have different engines, we're going to have to make some changes. After looking over 
 this code, move on to the `configurable_engine` branch to see how we accomodate this.
 
+As always, see this in action in our `runner.rb` file and can be run by running `ruby runner.rb` in the command line
+
 ## Read More
 
 Some extra links below if you want to read up more on dependency injection in ruby:
