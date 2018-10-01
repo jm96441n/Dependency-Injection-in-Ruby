@@ -7,7 +7,7 @@ class Engine
   end
 
   def start
-    puts "Starting #{name} engine that is #{@size} cubic centimeters with #{@horespower} horsepower and #{cylinders} cylinders"
+    puts "Starting #{name} engine that is #{@size} cubic centimeters with #{@horsepower} horsepower and #{cylinders} cylinders"
   end
 
   private

@@ -7,7 +7,7 @@ class Vehicle
     @color = color
     @make = make
     @model = model
-    @engine = engine(engine_size, engine_horsepower)
+    @engine = engine
   end
 
   def start
