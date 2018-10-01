@@ -38,14 +38,12 @@ different in this branch, and how it affects our codebase.
 
 ## Changes in this Branch
 
-So let's take a look at how using dependency injection allows us to more easily extend our code. By passing in the 
-dependency on `Engine` we remove the explicit dependency on the `Engine` class and change that dependency to be 
-"any object that responds to `start` method". This allows cars to have different types of engines, without any changes 
-necessary to the car class. Here we'll see the introduction of the `V6`, `V8`, and `V12` engine subclasses, and how we 
-can use them interchangeably when creating new instances of cars. In the next (and final) branch, `subclass_vehicle`, we 
-will see how the greater flexbility allows us to create `Vehicle` subclasses with ease.
+we would have to repeat that for each and every new class. You can see how that would be tedious. By moving the dependency on 
+the `Engine` class to the initialize method on vehicles, we're free to create as many subclasses of `Vehicle` as we would like 
+and configure the engine to be used when calling that class. This also allows us to have different engines for different instances 
+of each subclass (e.g. not every truck would use the same engine). 
 
-As always, see this in action in our `runner.rb` file and can be run by running `ruby runner.rb` in the command line
+As always, see this in action in our `runner.rb` file and can be run by running `ruby runner.rb` in the command line.
 
 ## Read More
 

@@ -1,5 +1,3 @@
-require_relative 'engine'
-
 class Vehicle 
   attr_reader :color, :make, :model
 
@@ -15,7 +13,12 @@ class Vehicle
   end
 
   def drive
-    puts "Driving a #{@color} #{@make} #{@model}"
+    puts "Driving a #{@color} #{@make} #{@model} #{type}"
+  end
+
+  private 
+  
+  def type
+    raise "Subclasses must implement type"
   end
 end
-
