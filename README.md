@@ -12,12 +12,12 @@ Dependency injection is a powerful technique for removing tightly coupled depend
 
 This provides a lot of benefits, main being that it makes our code more extensible and flexible. By removing the hard coded dependency it allows us to expand on different types of the dependency to use. 
 
-In the examples shown in this repo, as you move through the branches you'll see how it's easier to subclass `Engine` to the different types of engines by removing the instantiation of the `Engine` class in the `Car` class.
+In the examples shown in this repo, as you move through the branches you'll see how it's easier to subclass `Engine` to the different types of engines by removing the instantiation of the `Engine` class in the `Vehicle` class.
 
 
 ## Navigating this Repo
 
-So this repo is organized by branches. As you move between branches, you'll see the differences and changes made on in our `Car` and `Engine` classes to loosen up the coupling between them, and allow for different types of engines to be supplied with no changes necessary in the `Car` class. 
+So this repo is organized by branches. As you move between branches, you'll see the differences and changes made on in our `Vehicle` and `Engine` classes to loosen up the coupling between them, and allow for different types of engines to be supplied with no changes necessary in the `Vehicle` class. 
 
 To go in order of the refactors needed to get to a stable implementation of dependency injection moves between the branches in the order listed below:
 
@@ -25,8 +25,9 @@ To go in order of the refactors needed to get to a stable implementation of depe
 2) `configurable_engine`
 3) `use_dependency_injection`
 4) `subclass_engine`
+5) `subclass_vehicle`
 
-After switcing branches, be sure to check the section below (Changes in this Branch) to get an explanation of what's different in this branch, and how it affects our codebase.
+After switching branches, be sure to check the section below (Changes in this Branch) to get an explanation of what's different in this branch, and how it affects our codebase.
 
 ## Changes in this Branch
 
