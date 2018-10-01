@@ -38,9 +38,15 @@ different in this branch, and how it affects our codebase.
 
 ## Changes in this Branch
 
-Good news! Now we're finally using dependency injection. Rather than have the `Car` class initialize an `Engine`, we're now passing in (or injecting) the engine dependency, through the initializer for a car. This allows for the `Car` class to rely on it's engine, without having to know too much about the implementation details of an engine. 
+Good news! Now we're finally using dependency injection. Rather than have the `Vehicle` class initialize an `Engine`, 
+we're now passing in (or injecting) the engine dependency, through the initializer for a vehicle. This allows for the 
+`Vehicle` class to rely on it's engine, without having to know too much about the implementation details of an engine. 
 
-In addition, this will allow greater flexibility, extensibility, and reusability moving forward. If we want different types of engines we can pass them to the instance of `Car` that we're initializing, while if we want to reuse a particular type of engine, we only need to create one instance of it. We can see the added reusability in this branch, in that both the `blue_prius` and `orange_prius` use the same type of engine, but we only need to create one instance of it. The next (and final) branch, `subclass_engine`, will explore the added extensiblity and flexbility that dependency injection afford us.
+In addition, this will allow greater flexibility, extensibility, and reusability moving forward. If we want different 
+types of engines we can pass them to the instance of `Vehicle` that we're initializing, while if we want to reuse a particular 
+type of engine, we only need to create one instance of it. We can see the added reusability in this branch, in that 
+both the `blue_prius` and `orange_prius` use the same type of engine, but we only need to create one instance of it. 
+The next branch, `subclass_engine`, will explore the added extensiblity and flexbility that dependency injection afford us.
 
 As always, see this in action in our `runner.rb` file and can be run by running `ruby runner.rb` in the command line
 
