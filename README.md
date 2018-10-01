@@ -38,6 +38,8 @@ different in this branch, and how it affects our codebase.
 
 ## Changes in this Branch
 
+Now we'll see how dependency injection will make subclassing the `Vehicle` class much easier. In our first implementation,
+if we wanted to add a new type of vehicle we would have to define in that class exactly which engine it would have, and 
 we would have to repeat that for each and every new class. You can see how that would be tedious. By moving the dependency on 
 the `Engine` class to the initialize method on vehicles, we're free to create as many subclasses of `Vehicle` as we would like 
 and configure the engine to be used when calling that class. This also allows us to have different engines for different instances 
